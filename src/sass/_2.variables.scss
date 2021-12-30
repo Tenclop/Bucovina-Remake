@@ -1,0 +1,52 @@
+html {
+    --color-icons: #929292;
+    --color-text-light: #e9e9e1;
+    --color-text-darkgreen: #44593a;
+    --color-text-dark: #242424;
+    --color-bg-light: rgba(177, 174, 174, 0.109);
+    --color-primary-lightgreen: #98ff98;
+    --color-secondary-lightgreen: #82f082;
+    --color-tertiary-green: #00b100;
+    --color-tertiary-greenDark: #018801;
+  }
+  
+////////////////////////////* Font-Weights *////////////////////////
+
+  $font-weights: (
+      "font-weight-thin": 100,
+      "font-weight-light": 300,
+      "font-weight-regular": 400,
+      "font-weight-medium": 500,
+      "font-weight-bold": 700,
+      "font-weight-bolder": 900,
+  );
+
+  @function font-weight($font-weight-style){
+      @return map-get($font-weights, font-weight-style);
+  }
+
+////////////////////////////* Font-Size *////////////////////////
+
+$font-sizes: (
+  "font-size-small": calc(1.2rem + 0.5vw),
+  "font-size-regular": calc(1.5rem + 1vw),
+  "font-size-medium": calc(1.5rem + 2vw),
+  "font-size-large": calc(1.5rem + 5vw),
+  "font-size-xlarge": calc(2.5rem + 5vw),
+);
+
+@function font-size($font-size-style) {
+  @return map-get($font-sizes, $font-size-style);
+}
+
+////////////////////////////* Brake-Points *////////////////////////
+$break-points: (
+  "break-point-small": 400px,
+  "break-point-medium": 600px,
+  "break-point-tablet": 800px,
+  "break-point-desktop": 1300px,
+);
+
+@function break-point($break-point-limit) {
+  @return map-get($break-points, $break-point-limit);
+}
