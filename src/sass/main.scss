@@ -34,11 +34,31 @@
 @import "2.variables";
 @import "3.utilities";
 @import "4.header";
+@import "5.attraction";
+@import "6.traditions";
+@import "7.booking";
+@import "8.contact";
+@import "9.footer";
 
 /* Placeholders */
+
+//Flex-center
 
 %flex-center{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+//Background proprieties
+
+%bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+//Section padding
+%sec-padding {
+  padding: 6vh 4vw;
 }

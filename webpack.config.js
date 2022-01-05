@@ -32,16 +32,44 @@ module.exports = {
 
 
           {
-            test: /\.(svg|png|jpg|gif)$/,
+            test: /\.(svg|png|jpe?g|gif)$/,
             use: [
               {
+                
                 loader: "file-loader",
                 options: {
                   esModule: false,
                   name: "[name].[hash].[ext]",
                   outputPath: 'assets/images/'
                 }
-              }
+              },
+
+              // {
+              //   test: /\.svg$/,
+              //   loader: 'svg-inline-loader'
+              // },
+
+              {
+                loader: 'image-webpack-loader', // image compression => contains loaders for different types of images
+                options: {
+                  gifsicle: { // gif loader
+                    interlanced: false
+                  },
+                  optipng: { // png loader
+                    optimizationLevel: 7
+                  },
+                  pngquant: { // png loader
+                     
+                      quality: [0.65, 0.90],
+                      speed: 4
+                   
+                  },
+                  mozjpeg: { // jpg loader
+                    progressive: true,
+                    quality: 65
+                  }
+                },
+              },
             ],
             type: 'javascript/auto' 
           },

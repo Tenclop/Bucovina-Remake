@@ -1,0 +1,129 @@
+.attraction {
+  grid-column: container-start / container-end;
+  // height: 600px;
+  width: 100%;
+  position: relative;
+  padding: 5rem 0;
+
+  &__text {
+    @extend %flex-center;
+    flex-direction: column;
+    margin-top: 52vh;
+
+    img {
+      width: 7rem;
+      height: 7rem;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: font-size("font-size-regular");
+      font-family: "Indie Flower", cursive, "sans serif";
+      font-weight: font-weights("font-weight-bolder");
+    }
+  }
+
+  &__bg {
+    @extend %bg;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: -1;
+  }
+
+  &__section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 5rem 0;
+    position: absolute;
+    top: 100vh;
+    left: 10vw;
+  }
+  //img-container
+
+  &__about-img {
+    margin-bottom: 2rem;
+    width: 50%;
+    float: left;
+
+    img {
+      border-radius: 0.5rem;
+      object-fit: cover;
+      height: 30rem;
+      width: 45rem;
+      margin-top: 2.5rem;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  //btns
+  &__about {
+    background: var(--color-text-light);
+    border-radius: 0.5rem;
+    width: 50%;
+    float: right;
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    &-content {
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      padding: 2rem 1.5rem;
+
+      &__info {
+        display: none;
+        h4 {
+          font-size: 2rem;
+        }
+
+        p {
+          margin-bottom: 1.25rem;
+          font-size: font-size("font-size-small");
+        }
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+
+    &--btn-container {
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      .tab-btn {
+        padding: 1rem 0;
+        border: none;
+        text-transform: uppercase;
+        font-size: 1rem;
+        display: inline-block;
+        background: hsl(212, 33%, 89%);
+        cursor: pointer;
+        transition: all 0.3s linear;
+        letter-spacing: 0.25rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+
+        &:hover {
+          color: var(--color-text-light);
+          background: var(--color-text-dark);
+        }
+
+        &:hover:not(.active) {
+          background: hsl(205, 100%, 96%);
+          color: #49a6e9;
+        }
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+}
