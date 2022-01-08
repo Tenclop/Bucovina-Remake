@@ -49,6 +49,7 @@
     display: flex;
     gap: 10rem;
     position: relative;
+    flex-wrap: wrap;
 
     //grey trees img
     &:after {
@@ -141,6 +142,8 @@
         letter-spacing: 0.25rem;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         border-radius: 0.5rem;
+        font-size: font-size("font-size-ssmall");
+        font-family: "Poppins", sans-serif;
 
         &:hover {
           color: var(--color-blue);
@@ -159,9 +162,92 @@
     }
   }
 
-  @include media-desktop {
+  @include media-betweenTD {
     &__text {
       margin-top: 30vh;
+    }
+
+    &__section-center {
+      padding: 5rem 5rem;
+      gap: 10rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__about-img {
+      width: 80%;
+    }
+    //the about countent
+    &__about {
+      width: 80%;
+    }
+
+    &--btn-container {
+      .tab-btn {
+        font-size: font-size("font-size-small");
+      }
+    }
+
+    // @include media-tablet {
+
+    // }
+
+    @include media-small {
+      &__text {
+        margin-top: 35vh;
+
+        img {
+          width: 3rem;
+          height: 3rem;
+          display: inline-block;
+          vertical-align: bottom;
+        }
+
+        h1 {
+          font-size: font-size("font-size-regular");
+          font-family: "Indie Flower", cursive, "sans serif";
+          font-weight: font-weights("font-weight-bolder");
+        }
+      }
+
+      &__section-center {
+        gap: 0.5rem;
+        padding: 5rem 5rem;
+      }
+
+      &__about-img {
+        width: 100%;
+      }
+
+      &__about {
+        width: 100%;
+      }
+
+      &--btn-container {
+        .tab-btn {
+          padding: 0px;
+          font-size: font-size("font-size-medium");
+          letter-spacing: 0.05rem;
+        }
+      }
+
+      &__about {
+        &-content {
+          &__info {
+            h4 {
+              font-size: font-size("font-size-small");
+            }
+
+            p {
+              font-size: font-size("font-size-ssmall");
+            }
+
+            &.active {
+              display: block;
+            }
+          }
+        }
+      }
     }
   }
 }

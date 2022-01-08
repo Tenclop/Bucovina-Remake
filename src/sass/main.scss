@@ -5,6 +5,12 @@
   }
 }
 
+///******brake points 1100px ******///
+@mixin media-betweenTD {
+  @media screen and (max-width: break-point(break-point-betweenTD)) {
+    @content;
+  }
+}
 ///******brake points 800px ******///
 @mixin media-tablet {
   @media screen and (max-width: break-point(break-point-tablet)) {

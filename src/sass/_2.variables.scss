@@ -31,6 +31,7 @@ $font-weights: (
 ////////////////////////////* Font-Size *////////////////////////
 
 $font-sizes: (
+  "font-size-ssmall": calc(0.6rem + 0.5vw),
   "font-size-small": calc(1.2rem + 0.5vw),
   "font-size-regular": calc(1.5rem + 1vw),
   "font-size-medium": calc(1.5rem + 2vw),
@@ -47,6 +48,7 @@ $break-points: (
   "break-point-small": 400px,
   "break-point-medium": 600px,
   "break-point-tablet": 800px,
+  "break-point-betweenTD": 1100px,
   "break-point-desktop": 1300px,
 );
 
