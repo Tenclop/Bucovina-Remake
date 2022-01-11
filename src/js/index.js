@@ -43,5 +43,33 @@ elements.about.addEventListener("click", (e) => {
   }
 });
 
-console.log(elements.img);
-console.log(elements.btns);
+elements.aboutTraditions.addEventListener("click", (e) => {
+  const id = e.target.dataset.id;
+
+  // const idIMG = e.target.dataset.idIMG;
+
+  if (id) {
+    //remove active from other buttons
+    elements.btnsTradition.forEach((btn) => {
+      btn.classList.remove("active");
+      e.target.classList.add("active");
+    });
+    //hide other articles
+    elements.articlesTraditions.forEach((article) => {
+      article.classList.remove("active");
+    });
+    const element = document.getElementById(id);
+    element.classList.add("active");
+
+    //hide other imgs
+    elements.imgTraditions.forEach((image) => {
+      image.classList.remove("active");
+    });
+
+    if (id === "christmas") {
+      elements.imgTraditions[0].classList.add("active");
+    } else if (id === "easter") {
+      elements.imgTraditions[1].classList.add("active");
+    }
+  }
+});

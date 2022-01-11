@@ -8,7 +8,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome -->
+
+    <script
+      src="https://kit.fontawesome.com/fbadad80a0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,600&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
     <title>Document</title>
 </head>
 <body>
@@ -32,7 +42,7 @@
               <ul class ="header__nav--links">
                   <li class="header__nav--links__item"><a href="Attractions.html" data-text="Attractions">Attractions</a></li>
                   <li class="header__nav--links__item"><a href="Tradition.html" data-text="Traditions">Traditions</a></li>
-                  <li class="header__nav--links__item"><a href="Booking.html" data-text="Booking">Booking</a></li>
+                  <li class="header__nav--links__item"><a href="Booking.html" data-text="Booking">Explore</a></li>
                   <li class="header__nav--links__item"><a href="Contact.html" data-text="Contact">Contact</a></li>
 
 
@@ -156,9 +166,149 @@
       </div>
       </section>
 
-      <section class="traditions">  </section>
-      <section class="booking"></section>
-      <section class="contact"></section>
+
+      <!-- Traditions -->
+      <section class="traditions">  
+        <div class="traditions__container">
+          
+          <div class="traditions__container--txt">
+            <h1>Get to know the traditions</h1>
+            <h1>To help prepare yourself for the upcoming adventure!</h1>
+          </div>
+
+        <!-- Container -->
+       <div class="traditions__container-center traditions__container--section-center">
+        <article class="traditions__container-center--holder">
+          <img class="traditions__container-center--holder-img active" data-id="christmas" src="./assets/images/traditions/colindatori.jpg" alt="carolers " />
+          <img class="traditions__container-center--holder-img " data-id="easter" src="./assets/images/traditions/eggs.jpg" alt="easter eggs" />
+        </article>
+        <!--btn container-->
+        <article class="traditions__container--btn">
+          <div class="traditions__container--btn-holder">
+
+            <button class="tab-btns active" data-id="christmas">
+                <i class="fas fa-holly-berry"></i>
+              </button>
+
+
+            <button class="tab-btns" data-id="easter">
+              <i class="fas fa-egg"></i>
+            </button>
+          </div>
+
+          <article class="traditions__container-content">
+            <!--single item-->
+            <div class="traditions__container-content__info active" id="christmas">
+              <h4>Winter Customs and Traditions in Bucovina</h4>
+              <!-- fortress-->
+          <p>
+         Possibly, the winter holidays are the most spectacular and relevant
+          events for the spiritual culture of the Romanian people that the
+          country's folklore has to offer.
+          Bucovina has always bee one of the reference areas where these
+          holidays, together with the whole set of rituals, ceremonies, practices,
+          customs and traditions, convey a sense of spirituality representative of
+          Romanian traditions. The birth of Jesus and the celebration of earlier deities
+          overlapped. So, Christmas rituals make to most out of both pagan
+          and Christian elements. The time measures in folk popular
+          calendar are illustrated by mythical personifications which are
+          born, grow old and die at certain dates. Their age begins with
+          Christmas, when the old time dies, followed by a week of chaos,
+          the night increases, the darkness becomes predominant and the
+          people fear that the end of the world may come. Time stops on New
+          Year's Eve, to start all over again on the Day of the New Year.
+          <!-- The ritual practices from the period before Christmas
+          recreate a symbolic new beginning, rituals of the time's rebirth
+          through magical practice: the slaughter of the pig, the ritual
+          preparation of food, the lighting and the switching off of the lights,
+          the driving away the evil spirits and the dead by dancing with
+          masks, all these illustrate the background of the pre-Christian
+          winter holidays. -->
+        </p>
+
+            </div>
+            <!--end of item-->
+
+            <!--single item-->
+            <div class="traditions__container-content__info" id="easter">
+              <h4>Easter Customs and Traditions in Bucovina</h4>
+              <!-- vision -->
+              <p>
+                Bucovina region is known for its Easter traditions and the charm of monasteries full of history, which complete the Romanian's 
+                tradition from Bucovina. Every detail of Easter traditions, from the handcrafting, decorations of eggs, the braiding bread, 
+                to the habits from the Easter night, reflects the history and the cultural legacy, passed over from one generation to another.
+                The most popular tradition is the painting and decoration of eggs. Bucovina is a region with a traditional technique 
+                for eggs decoration. Some who still keep the tradition alive, use an instrument called “chisita” (a sharp peak made of
+                sheet-metal, fixed on the tip of flat stick). Nowadays is used also the nib. The handicraft of eggs decoration is related
+                to the embroidery. The Easter night's  traditions and the decorations that are found on the national costumes transform a 
+                common thing into a beautiful art. The handicraft in passed from generation to generation.
+                <!-- The handicraft is observed in the harmony of the colors, in the gentleness of the models passed from one generation to another.
+                The eggs are painted in three or four colors, usually taking into account the symbol behind it. The chromatic of the painted 
+                eggs makes the difference between the main areas where this handicraft is done.
+                The eggs should be decorated on the Good Thursday or the Holy Saturday and are brought in the Easter night or morning to be blessed. -->
+              </p>
+            </div>
+            <!--end of item-->
+            </article>
+        </article>
+        </div>
+      </section>
+
+      <!-- Explore -->
+      <section class="explore">
+        <div class="explore__section">
+
+        <div class="explore__section--center">
+            <div class="explore__section--center-txt">
+            <h1>THINGS TO DO</h1>
+            <h2>The most intriguing activities in Bucovina</h2>
+           </div>
+        </div>
+
+        <div class="explore__section--center-holder">
+          <div class="explore__section--center-holder__container">
+
+                  <div class="explore__section--center-holder__container-img">
+                    <div class="explore__section--center-holder__container-img__borders">
+                  <img src="./assets/images/explore/hiking.jpg" alt="hiking">
+                   <img src="./assets/images/explore/icon-1.png" alt="">
+                  </div>
+                  <h2>Hiking</h2>
+                  <h1>The journey of a thousand miles begins with a single step!</h1>
+                  
+                  </div>
+
+                  <div class="explore__section--center-holder__container-img">
+                    <div class="explore__section--center-holder__container-img__borders">
+                  <img src="./assets/images/explore/flying-fox.png" alt="flying fox on Palma">
+                    <img src="./assets/images/explore/icon-3.png" alt="">
+                  </div>
+
+                  <h2>Zip Line</h2>
+                  <h1>If you love adrenaline, then you know what to do!</h1>
+                  </div>
+
+
+                  <div class="explore__section--center-holder__container-img">
+                    <div class="explore__section--center-holder__container-img__borders">
+                  <img src="./assets/images/explore/skiing.jpg" alt="skiing in gura humorului">
+                  <img src="./assets/images/explore/icon-2.png" alt="">
+                  </div>
+                  <h2>Skiing</h2>
+                  <h1>You can’t buy happiness, but you can buy a ski pass.</h1>
+                  </div>
+
+                  
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <section class="contact">
+      </section>
       <footer class="footer"></footer>
 
 </body>

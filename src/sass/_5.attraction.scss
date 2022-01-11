@@ -7,7 +7,7 @@
   &__text {
     @extend %flex-center;
     flex-direction: column;
-    margin-top: 20vh;
+    margin-top: 30vh;
     position: relative;
     z-index: 3;
 
@@ -162,6 +162,12 @@
     }
   }
 
+  @include media-desktop {
+    &__text {
+      margin-top: 30vh;
+    }
+  }
+
   @include media-betweenTD {
     &__text {
       margin-top: 30vh;
@@ -226,7 +232,7 @@
       &--btn-container {
         .tab-btn {
           padding: 0px;
-          font-size: font-size("font-size-medium");
+          font-size: font-size("font-size-small");
           letter-spacing: 0.05rem;
         }
       }
@@ -239,7 +245,7 @@
             }
 
             p {
-              font-size: font-size("font-size-ssmall");
+              font-size: font-size("font-size-msmall");
             }
 
             &.active {

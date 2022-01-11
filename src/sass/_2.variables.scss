@@ -5,8 +5,15 @@ html {
   --color-text-darkgreen: #44593a;
   --color-text-dark: #242424;
   --color-bg-light: rgba(177, 174, 174, 0.109);
+  --color-primary-brown: #cab5a0;
+  --color-secondary-brown: #e6ceb7;
+  --color-tertiary-brown: #e7d5c3;
+  --color-quaternary-brown: #d0bca4;
+  --color-text-brown: #4d3434;
+  --color-primary-brown-orange: #aa7e4c3a;
   --color-blue: #49a6e9;
   --color-blue-light: #49a6e99d;
+  --color-primary-yellow: #d1ff19;
   --color-primary-lightgreen: #98ff98;
   --color-secondary-lightgreen: #82f082;
   --color-tertiary-green: #00b100;
@@ -32,6 +39,7 @@ $font-weights: (
 
 $font-sizes: (
   "font-size-ssmall": calc(0.6rem + 0.5vw),
+  "font-size-msmall": calc(0.8rem + 0.5vw),
   "font-size-small": calc(1.2rem + 0.5vw),
   "font-size-regular": calc(1.5rem + 1vw),
   "font-size-medium": calc(1.5rem + 2vw),
