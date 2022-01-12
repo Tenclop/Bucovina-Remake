@@ -1,5 +1,173 @@
-.contact{
-    grid-column: container-start / container-end;
-    height: 600px;
-    background-color: rgb(229, 255, 0);
+.contact {
+  grid-column: container-start / container-end;
+  //   height: 600px;
+  // background-color: rgb(229, 255, 0);
+  background-image: url("../assets/images/contact/wall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  font-family: "Indie Flower", cursive, "sans serif";
+
+  &__txt {
+    @extend %flex-center;
+    padding: 8rem 0;
+    font-family: "Poppins", sans-serif;
+
+    h1 {
+      color: var(--color-white);
+      font-size: font-size("font-size-regular");
+      letter-spacing: 0.25rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__container {
+    position: relative;
+    @extend %flex-center;
+    padding: 5rem 20rem;
+
+    &--box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      //   max-width: 53.125rem;
+
+      //   height: auto;
+      background-color: var(--color-white);
+      box-shadow: 0px 0px 19px 5px var(--color-text-dark);
+
+      &-left {
+        height: 100%;
+        width: 100%;
+        background-image: url("../assets/images/contact/undraw_contact.svg");
+        @extend %bg;
+      }
+
+      &-right {
+        padding: 2.5rem 4rem;
+
+        input,
+        select,
+        textarea {
+          color: var(--color-text-dark);
+          font-family: "Poppins", sans-serif;
+        }
+        input:hover,
+        select:hover,
+        textarea:hover {
+          color: var(--color-white);
+        }
+
+        &_btn {
+          width: 80%;
+          padding: 0.5rem 0.5rem;
+          margin-top: 0.5em;
+          font-family: "Poppins", sans-serif;
+          font-size: font-size("font-size-regular");
+          background-color: var(--color-secondary-yellow);
+          cursor: pointer;
+          outline: none;
+          border: none;
+          border-radius: 5rem;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: var(--color-text-dark);
+            color: var(--color-secondary-yellow);
+          }
+        }
+
+        &_field {
+          width: 100%;
+          padding: 0.5rem 1rem;
+          outline: none;
+          border: 2px solid var(--color-text-dark);
+          background-color: var(--color-white);
+          font-size: font-size("font-size-small");
+          margin-top: 1.25rem;
+          transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+          &:hover,
+          &:focus {
+            background-color: var(--color-text-dark);
+            color: var(--color-white);
+          }
+
+          &.area {
+            min-height: 12rem;
+          }
+        }
+      }
+
+      h1 {
+        position: relative;
+        padding: 1rem;
+        font-size: font-size("font-size-regular");
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%);
+          height: 4px;
+          width: 50px;
+          background-color: var(--color-secondary-yellow);
+        }
+      }
+    }
+  }
+
+  @include media-betweenTD {
+    &__container {
+      padding: 0 10rem 6rem 10rem;
+    }
+  }
+  @include media-tablet {
+    &__container {
+      padding: 0 10rem 6rem 10rem;
+
+      &--box {
+        grid-template-columns: 1fr;
+        grid-template-rows: 20rem 1fr;
+      }
+    }
+  }
+
+  @include media-medium {
+    &__container {
+      padding: 0 4rem 4rem 4rem;
+
+      &--box {
+        &-right {
+          &_field {
+            &.area {
+              min-height: 8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-small {
+    &__container {
+      padding: 0 3rem 4rem 3rem;
+
+      &--box {
+        &-right {
+          &_field {
+            &.area {
+              min-height: 6rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
