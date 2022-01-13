@@ -20,6 +20,41 @@
       font-size: font-size("font-size-regular");
       letter-spacing: 0.25rem;
       text-transform: uppercase;
+      position: relative;
+      align-self: center;
+      padding: 1rem;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        background-color: var(--color-secondary-yellow);
+        height: 100%;
+        width: 0.2rem;
+        transition: all 0.4s ease-in-out;
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+      }
+
+      &:hover::before,
+      &:active::before,
+      &:hover::after,
+      &:active::after {
+        height: 0.2rem;
+        width: 100%;
+      }
+
+      &:hover::after,
+      &:active::after {
+        top: 100%;
+      }
     }
   }
 

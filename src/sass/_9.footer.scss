@@ -1,5 +1,10 @@
-.footer{
-    grid-column: container-start / container-end;
-    height: 600px;
-    background-color: rgb(47, 0, 255);
+.footer {
+  grid-column: container-start / container-end;
+
+  //   height: 600px;
+  width: 100%;
+
+  background-image: url("../assets/images/footer/footer.svg");
+  @extend %bg;
+  @extend %sec-padding;
 }
