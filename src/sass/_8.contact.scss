@@ -13,7 +13,7 @@
   &__txt {
     @extend %flex-center;
     padding: 8rem 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Balsamiq Sans", cursive;
 
     h1 {
       color: var(--color-white);
@@ -90,7 +90,7 @@
         select,
         textarea {
           color: var(--color-text-dark);
-          font-family: "Poppins", sans-serif;
+          font-family: "Balsamiq Sans", cursive;
         }
         input:hover,
         select:hover,
@@ -102,7 +102,7 @@
           width: 80%;
           padding: 0.5rem 0.5rem;
           margin-top: 0.5em;
-          font-family: "Poppins", sans-serif;
+          font-family: "Balsamiq Sans", cursive;
           font-size: font-size("font-size-regular");
           background-color: var(--color-secondary-yellow);
           cursor: pointer;

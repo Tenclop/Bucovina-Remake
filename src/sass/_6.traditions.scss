@@ -35,7 +35,7 @@
       flex-direction: column;
       padding: 5rem 0;
       font-size: font-size("font-size-small");
-      font-family: "Poppins", sans-serif;
+      font-family: "Balsamiq Sans", cursive;
       font-weight: font-weights("font-weight-bold");
       color: var(--color-text-brown);
       text-transform: uppercase;
@@ -103,7 +103,7 @@
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
           border-radius: 0.5rem;
           font-size: font-size("font-size-ssmall");
-          font-family: "Poppins", sans-serif;
+          font-family: "Balsamiq Sans", cursive;
 
           i {
             font-size: font-size("font-size-small");
@@ -135,14 +135,14 @@
         display: none;
         h4 {
           font-size: 2rem;
-          font-family: "Poppins", sans-serif;
+          font-family: "Balsamiq Sans", cursive;
           color: var(--color-text-brown);
         }
 
         p {
           margin-bottom: 1.25rem;
           font-size: calc(1rem + 0.5vw);
-          font-family: "Poppins", sans-serif;
+          font-family: "Balsamiq Sans", cursive;
         }
 
         &.active {

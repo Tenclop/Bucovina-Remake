@@ -7,7 +7,7 @@
   &__text {
     @extend %flex-center;
     flex-direction: column;
-    margin-top: 30vh;
+    margin-top: calc(0.5rem + 30vh);
     position: relative;
     z-index: 3;
 
@@ -110,13 +110,13 @@
         display: none;
         h4 {
           font-size: 2rem;
-          font-family: "Poppins", sans-serif;
+          font-family: "Balsamiq Sans", cursive;
         }
 
         p {
           margin-bottom: 1.25rem;
           font-size: calc(1rem + 0.5vw);
-          font-family: "Poppins", sans-serif;
+          font-family: "Balsamiq Sans", cursive;
         }
 
         &.active {
@@ -143,7 +143,7 @@
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         border-radius: 0.5rem;
         font-size: font-size("font-size-ssmall");
-        font-family: "Poppins", sans-serif;
+        font-family: "Balsamiq Sans", cursive;
 
         &:hover {
           color: var(--color-blue);
@@ -164,13 +164,13 @@
 
   @include media-desktop {
     &__text {
-      margin-top: 30vh;
+      margin-top: calc(0.5rem + 35vh);
     }
   }
 
   @include media-betweenTD {
     &__text {
-      margin-top: 30vh;
+      margin-top: calc(0.5rem + 30vh);
     }
 
     &__section-center {
@@ -194,13 +194,15 @@
       }
     }
 
-    // @include media-tablet {
-
-    // }
+    @include media-tablet {
+      &__text {
+        margin-top: calc(0.5rem + 40vh);
+      }
+    }
 
     @include media-small {
       &__text {
-        margin-top: 35vh;
+        margin-top: calc(0.5rem + 30vh);
 
         img {
           width: 3rem;

@@ -1,21 +1,22 @@
-:root{
-    font-size: 62.5%;
+:root {
+  font-size: 62.5%;
 }
 
 .container {
-    display: grid;
-    grid-template-columns:
-      [container-start] 1fr [center-start] repeat(
-        6,
-        [col-start] minmax(min-content, 16.66667rem) [col-end]
-      )
-      [center-end] 1fr [container-end];
-    grid-template-rows: min-content 90vh repeat(8, min-content);
+  display: grid;
+  grid-template-columns:
+    [container-start] 1fr [center-start] repeat(
+      6,
+      [col-start] minmax(min-content, 16.66667rem) [col-end]
+    )
+    [center-end] 1fr [container-end];
+  grid-template-rows: min-content 90vh repeat(8, min-content);
 }
 
 a:link,
 a:visited {
   text-decoration: none;
+  font-family: "Balsamiq Sans", cursive;
   color: var(--color-text-light);
   font-weight: font-weight(font-weight-light);
   letter-spacing: 0.2rem;
