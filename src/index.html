@@ -23,7 +23,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id='Home'>
 
         <!--hamburger lines container-->
         <div class="header__menu">
@@ -33,22 +33,19 @@
               <!-- Overlay -->
               <div class="header__overlay"></div>
 
-        <nav class = "header__nav">
-              <a href="Index.html" class = "header__nav--logo">
+        <nav class = "header__nav" id= "nav">
+              <a href="#Home" class = "header__nav--logo scroll-link">
                   <img src="assets/images/logo.png" alt="logo" >
               </a>
-
-
-
+             
+              <div class="header__nav--links-container">
               <ul class ="header__nav--links">
-                  <li class="header__nav--links__item"><a href="Attractions.html" data-text="Attractions">Attractions</a></li>
-                  <li class="header__nav--links__item"><a href="Tradition.html" data-text="Traditions">Traditions</a></li>
-                  <li class="header__nav--links__item"><a href="Booking.html" data-text="Booking">Explore</a></li>
-                  <li class="header__nav--links__item"><a href="Contact.html" data-text="Contact">Contact</a></li>
-
-
-                </ul>
-            </div>    
+                  <li class="header__nav--links__item" ><a href="#Attractions" class="header__nav--links__item-a scroll-link"  data-text="Attractions">Attractions</a></li>
+                  <li class="header__nav--links__item"><a href="#Traditions" class="header__nav--links__item-a scroll-link" data-text="Traditions">Traditions</a></li>
+                  <li class="header__nav--links__item"><a href="#Explore" class="header__nav--links__item-a scroll-link" data-text="Explore">Explore</a></li>
+                  <li class="header__nav--links__item"><a href="#Contact" class="header__nav--links__item-a scroll-link" data-text="Contact">Contact</a></li>
+                </ul>  
+              </div>
           </nav>
           </header>
 
@@ -64,14 +61,14 @@
             </div>
 
             <div class="hero__container--btn">
-            <button class="hero__container--btn-visit hero__container--btn-text"><a href="Attractions.html">Visit now</a></button>
+            <button class="hero__container--btn-visit hero__container--btn-text scroll-link" onClick="document.getElementById('Attractions').scrollIntoView();"><a href="#Attractions">Visit now</a></button>
           </div>
           </div>
       
       </section>
     
       <!-- Attraction -->
-      <section class="attraction">
+      <section class="attraction"  id="Attractions">
         <div class="attraction__text">     
          
        <h1>START PLANNING  <img
@@ -169,7 +166,7 @@
 
 
       <!-- Traditions -->
-      <section class="traditions">  
+      <section class="traditions" id="Traditions">  
         <div class="traditions__container">
           
           <div class="traditions__container--txt">
@@ -256,7 +253,7 @@
       </section>
 
       <!-- Explore -->
-      <section class="explore">
+      <section class="explore" id="Explore">
         <div class="explore__section">
 
         <div class="explore__section--center">
@@ -308,7 +305,7 @@
       </section>
 
 <!-- Contact -->
-      <section class="contact">
+      <section class="contact" id="Contact">
         <div class="contact__txt">
           <h1>Contact us</h1>
         </div>
@@ -459,6 +456,11 @@
         </div>
       </div>
       </footer>
+
+          <!--back to top btn-->
+    <a class="scroll-link top-link" href="#Home">
+      <i class="fas fa-arrow-up"></i>
+    </a>
 
 </body>
 </html>

@@ -3,11 +3,12 @@
   height: 100%;
   width: 100%;
   position: relative;
+  padding: 1.5rem 0;
 
   &__text {
     @extend %flex-center;
     flex-direction: column;
-    margin-top: calc(0.5rem + 30vh);
+    // margin-top: calc(0.5rem + 30vh);
     position: relative;
     z-index: 3;
 
@@ -104,7 +105,7 @@
     &-content {
       border-bottom-left-radius: 0.5rem;
       border-bottom-right-radius: 0.5rem;
-      padding: 2rem 1.5rem;
+      padding: 0 1.5rem;
 
       &__info {
         display: none;
@@ -162,30 +163,34 @@
     }
   }
 
-  @include media-desktop {
-    &__text {
-      margin-top: calc(0.5rem + 35vh);
-    }
-  }
+  // @include media-desktop {
+  //   &__text {
+  //     margin-top: calc(0.5rem + 35vh);
+  //   }
+  // }
 
   @include media-betweenTD {
-    &__text {
-      margin-top: calc(0.5rem + 30vh);
-    }
+    // &__text {
+    //   margin-top: calc(0.5rem + 30vh);
+    // }
 
     &__section-center {
       padding: 5rem 5rem;
-      gap: 10rem;
+      gap: 5rem;
       justify-content: center;
       align-items: center;
     }
 
     &__about-img {
-      width: 80%;
+      width: 60%;
+      height: auto;
     }
     //the about countent
     &__about {
       width: 80%;
+      &-content {
+        padding: 3rem 2rem;
+      }
     }
 
     &--btn-container {
@@ -194,15 +199,15 @@
       }
     }
 
-    @include media-tablet {
-      &__text {
-        margin-top: calc(0.5rem + 40vh);
-      }
-    }
+    // @include media-tablet {
+    //   &__text {
+    //     margin-top: calc(0.5rem + 40vh);
+    //   }
+    // }
 
     @include media-small {
       &__text {
-        margin-top: calc(0.5rem + 30vh);
+        // margin-top: calc(0.5rem + 30vh);
 
         img {
           width: 3rem;
@@ -247,7 +252,7 @@
             }
 
             p {
-              font-size: font-size("font-size-msmall");
+              font-size: font-size("font-size-small");
             }
 
             &.active {

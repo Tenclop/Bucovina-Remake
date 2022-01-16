@@ -16,4 +16,12 @@ export const elements = {
   imgTraditions: document.querySelectorAll(
     ".traditions__container-center--holder-img"
   ),
+
+  //navigation selectors
+  navToggle: document.querySelector(".header__menu"),
+  linksContainer: document.querySelector(".header__nav--links-container"),
+  links: document.querySelector("header__nav--links-a"),
+  scrollLinks: document.querySelectorAll(".scroll-link"),
+  navbar: document.getElementById("nav"),
+  topLink: document.querySelector(".top-link"),
 };

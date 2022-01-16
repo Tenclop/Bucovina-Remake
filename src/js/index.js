@@ -8,6 +8,7 @@ elements.menu.addEventListener("click", () => {
   elements.overlay.classList.toggle("open");
 });
 
+//about section
 elements.about.addEventListener("click", (e) => {
   const id = e.target.dataset.id;
 
@@ -43,6 +44,7 @@ elements.about.addEventListener("click", (e) => {
   }
 });
 
+//tradition section
 elements.aboutTraditions.addEventListener("click", (e) => {
   const id = e.target.dataset.id;
 
@@ -72,4 +74,51 @@ elements.aboutTraditions.addEventListener("click", (e) => {
       elements.imgTraditions[1].classList.add("active");
     }
   }
+});
+
+// ********** scroll to top ************
+
+window.addEventListener("scroll", () => {
+  const scrollHeight = window.pageYOffset;
+  if (scrollHeight > 500) {
+    elements.topLink.classList.add("show-link");
+  } else {
+    elements.topLink.classList.remove("show-link");
+  }
+});
+
+// ********** close links ************ and get height auto dinamic
+elements.scrollLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    //prevent default click
+    e.preventDefault();
+    //navigate to the specific supports
+    const id = e.currentTarget.getAttribute("href").slice(1);
+    const elementItem = document.getElementById(id);
+    /* Calculate the hights 
+    Height of nav*/
+
+    const navHeight = elements.navbar.getBoundingClientRect().height;
+    let position = elementItem.offsetTop - navHeight;
+
+    //Height of links
+    const containerHeight =
+      elements.linksContainer.getBoundingClientRect().height;
+
+    if (navHeight) {
+      position = position + containerHeight;
+    }
+
+    if (window.innerWidth < 800) {
+      //Height of links for responsive positioning
+      position = position + (navHeight - containerHeight);
+    }
+    window.scrollTo({
+      left: 0,
+      top: position,
+    });
+    elements.menu.classList.remove("open");
+    elements.header.classList.remove("open");
+    elements.overlay.classList.remove("open");
+  });
 });

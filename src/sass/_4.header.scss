@@ -1,5 +1,6 @@
 .header {
   grid-column: container-start / container-end;
+  padding: 1rem 1.5rem;
   //Delete after test
   // height: 400px;
   // background-color: var(--color-primary-lightgreen);
@@ -62,7 +63,7 @@
     overflow: hidden;
 
     &--logo {
-      padding: 1rem;
+      padding: 1.5rem 1rem 1rem 1rem;
       img {
         height: 5rem;
         width: 5rem;
@@ -148,6 +149,16 @@
       }
     }
   }
+
+  // @include media-betweenTD {
+  //   &__nav {
+  //     &--links {
+  //       &-container {
+  //         padding-left: calc(2rem + 5vw);
+  //       }
+  //     }
+  //   }
+  // }
 
   @include media-tablet {
     &__bg--img {

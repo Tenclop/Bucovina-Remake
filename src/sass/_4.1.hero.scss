@@ -1,7 +1,7 @@
 .hero {
   grid-column: container-start / container-end;
   //Delete after test
-  height: 400px;
+  padding: 1rem 0 0 0;
   // background-color: var(--color-primary-lightgreen);
 
   &__bg--img {
@@ -25,6 +25,7 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+    padding: 5.5rem 0;
     margin: 20vh 0;
     height: 100%;
     width: 100%;
@@ -34,6 +35,7 @@
 
     p {
       font-size: font-size("font-size-regular");
+      padding-bottom: 2rem;
     }
   }
 
@@ -45,75 +47,93 @@
   }
 
   /* Hero-btn */
-
-  &__container--btn-visit {
-    background-color: transparent;
-    border: 4px solid var(--color-primary-lightgreen);
-    color: var(--color-text-light);
-    cursor: pointer;
-    padding: 1rem 3rem;
-
-    &:hover {
-      background-color: var(--color-secondary-lightgreen);
+  &__container--btn {
+    padding-top: 5rem;
+    &-visit {
+      background-color: transparent;
+      border: 4px solid var(--color-primary-lightgreen);
       color: var(--color-text-light);
-    }
-  }
+      cursor: pointer;
+      padding: 1rem 3rem;
 
-  &__container--btn-text {
-    font-size: 0.5rem;
-    font-weight: bold;
+      &:hover {
+        background-color: var(--color-secondary-lightgreen);
+        color: var(--color-text-light);
+      }
+    }
+
+    &-text {
+      font-size: 0.5rem;
+      font-weight: bold;
+    }
   }
 
   /* Brake-Points */
+  @include media-desktop {
+    &__textHolder {
+      padding: 15rem 0;
+    }
+  }
 
-  @include media-tablet {
+  @include media-betweenTD {
+    &__textHolder {
+      padding: 12rem 0;
+    }
+
+    @include media-tablet {
+      .hero {
+        &__bg--img {
+          background-image: url("../assets/images/hero-small.jpg");
+        }
+      }
+
+      &__textHolder {
+        padding: 14rem 0;
+        p {
+          font-size: font-size("font-size-medium");
+        }
+      }
+
+      &__container--btn-text {
+        a {
+          text-shadow: 2px 2px #000000;
+          font-size: font-size("font-size-regular");
+        }
+      }
+    }
+  }
+
+  @include media-medium {
     .hero {
-      &__bg--img {
-        background-image: url("../assets/images/hero-small.jpg");
+      &__textHolder {
+        padding: 15.5rem 0;
+        p {
+          font-size: font-size("font-size-medium");
+        }
       }
-    }
 
-    &__textHolder {
-      p {
-        font-size: font-size("font-size-medium");
+      &__h {
+        text-align: center;
       }
-    }
 
-    &__container--btn-text {
-      a {
-        text-shadow: 2px 2px #000000;
-        font-size: font-size("font-size-regular");
-      }
-    }
-  }
-}
-
-@include media-medium {
-  .hero {
-    &__textHolder {
-      p {
-        font-size: font-size("font-size-medium");
-      }
-    }
-
-    &__h {
-      text-align: center;
-    }
-
-    &__container--btn-text {
-      a {
-        text-shadow: 2px 2px #000000;
-        font-size: font-size("font-size-regular");
+      &__container--btn-text {
+        a {
+          text-shadow: 2px 2px #000000;
+          font-size: font-size("font-size-regular");
+        }
       }
     }
   }
-}
 
-@include media-small {
-  .hero {
-    &__container--btn-text {
-      a {
-        font-size: font-size("font-size-small");
+  @include media-small {
+    .hero {
+      &__textHolder {
+        padding: 15.5rem 0;
+      }
+      &__container--btn-text {
+        a {
+          font-size: font-size("font-size-small");
+        }
       }
     }
   }
