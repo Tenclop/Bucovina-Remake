@@ -24,7 +24,6 @@
       position: absolute;
       @extend %bg;
       background-image: url("../assets/images/traditions/topwood.png");
-      //   transform: rotate(180deg);
       bottom: -4rem;
       left: 0;
       width: 100%;
@@ -45,7 +44,6 @@
     &-center {
       margin: 0 auto;
       padding: 0 3rem 5rem 3rem;
-      // padding-bottom: 5rem;
       display: flex;
       justify-content: space-evenly;
       gap: 10rem;
@@ -184,7 +182,6 @@
         }
       }
       &-center {
-        // padding: 5rem 5rem;
         gap: 2rem;
         justify-content: center;
         align-items: center;
@@ -210,12 +207,17 @@
       }
     }
 
+    //600px bp
     @include media-medium {
       &__container {
         &-center {
           &--holder {
-            width: 75%;
+            width: 85%;
           }
+        }
+
+        &--btn {
+          width: 100%;
         }
       }
     }

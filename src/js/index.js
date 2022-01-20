@@ -1,6 +1,7 @@
 import "D:/LearnDev/Practice-js/Small-Projects-master/Bukovina/src/sass/main.scss";
 
 import { elements } from "./base";
+import gsap from "gsap";
 
 elements.menu.addEventListener("click", () => {
   elements.menu.classList.toggle("open");
@@ -122,3 +123,22 @@ elements.scrollLinks.forEach((link) => {
     elements.overlay.classList.remove("open");
   });
 });
+
+//gsap intro
+const timeLine = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+timeLine.to(".header__intro--text-hide-text", {
+  y: "0%",
+  duration: 1,
+  stagger: 0.25,
+});
+
+timeLine.to(".header__slider", { y: "-100%", duration: 1.5, delay: 0.5 });
+timeLine.to(".header__intro", { y: "-100%", duration: 1 }, "-=1");
+timeLine.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
+timeLine.fromTo(
+  ".hero__textHolder",
+  { opacity: 0 },
+  { opacity: 1, duration: 1 },
+  "-=1"
+);

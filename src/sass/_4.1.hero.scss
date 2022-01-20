@@ -1,8 +1,6 @@
 .hero {
   grid-column: container-start / container-end;
-  //Delete after test
   padding: 1rem 0 0 0;
-  // background-color: var(--color-primary-lightgreen);
 
   &__bg--img {
     background-image: url("../assets/images/hero.jpg");
@@ -128,7 +126,7 @@
   @include media-small {
     .hero {
       &__textHolder {
-        padding: 15.5rem 0;
+        padding: 13rem 0;
       }
       &__container--btn-text {
         a {
