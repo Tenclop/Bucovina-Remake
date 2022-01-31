@@ -69,6 +69,13 @@ module.exports = {
               },
             },
           },
+
+          {
+            loader: "webp-loader",
+            options: {
+              quality: 24,
+            },
+          },
         ],
         type: "javascript/auto",
       },
