@@ -17,6 +17,7 @@
     "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
     "image-webpack-loader": "^8.0.1",
+    "img-optimize-loader": "^1.0.7",
     "node-sass": "^7.0.1",
     "sass": "^1.45.1",
     "sass-loader": "^12.4.0",
