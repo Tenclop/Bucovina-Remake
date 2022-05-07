@@ -73,7 +73,7 @@ module.exports = {
           {
             loader: "webp-loader",
             options: {
-              quality: 94,
+              quality: 84,
             },
           },
         ],

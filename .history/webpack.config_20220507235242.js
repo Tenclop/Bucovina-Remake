@@ -54,7 +54,7 @@ module.exports = {
               },
               optipng: {
                 // png loader
-                optimizationLevel: 7,
+                optimizationLevel: 1,
               },
               pngquant: {
                 // png loader
@@ -73,7 +73,7 @@ module.exports = {
           {
             loader: "webp-loader",
             options: {
-              quality: 94,
+              quality: 24,
             },
           },
         ],
