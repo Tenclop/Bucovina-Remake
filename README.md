@@ -18,7 +18,7 @@
     
     
 ## About
- <p>Bukovina it’s a brochure website about mountain tourism. This project represents my first time when I worked with npm and webpack. Understanding how to use webpack third-party packages was a little challenge.
+ <p>Bucovina it’s a brochure website about mountain tourism. This project represents my first time when I worked with npm and webpack. Understanding how to use webpack third-party packages was a little challenge.
     <a href="https://bukovina.netlify.app">Link to demo. 🌲</a>
 </p>
 
